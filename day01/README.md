@@ -117,3 +117,12 @@ Consider sums of a three-measurement sliding window. *How many sums are larger
 than the previous sum?*
 
 # Solution
+See code
+
+# Things other people did that I like
+[This person visualized the submarine scan in Python](https://www.reddit.com/r/adventofcode/comments/r6gq01/2021_day_1_python_terminal_visualization_ocean/)
+
+[Someone wrote a beautiful poem in Dylan Beattie's
+Rockstar](https://www.reddit.com/r/adventofcode/comments/r6kl94/2021_day_1_part_1_rockstar_feeling_edgy/)
+:
+![](https://i.redd.it/xk7a23fwxy281.jpg)
