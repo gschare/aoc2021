@@ -1,0 +1,39 @@
+$ ghci
+GHCi, version 8.6.5: http://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/gschare/.ghc/ghci.conf
+λ> forward n (x,d) = (x + n,d)
+λ> down n (x,d) = (x,d+n)
+λ> up n (x,d) = (x,d-n)
+λ> :{
+   | readCommand s = case (takeWhile (/=' ') s) of
+   |     "forward" -> forward n
+   |     "down" -> down n
+   |     "up" -> up n
+   |     _ -> error "invalid command"
+   |   where n = (read $ tail $ dropWhile (/=' ') s) :: Int
+   | :}
+λ> f acc s = (readCommand s) acc
+λ> solve = foldl f (0,0)
+λ> a <- lines <$> readFile "sample.txt"
+λ> solve a
+(15,10)
+λ> b <- lines <$> readFile "input.txt"
+λ> (\(x,y) -> x * y) $ solve b
+1561344
+λ> forward n (x,d,a) = (x + n,d+(a*x),a)
+λ> down n (x,d,a) = (x,d,a+n)
+λ> up n (x,d,a) = (x,d,a-n)
+λ> solve2 = foldl f (0,0,0)
+λ> (\(x,y) -> x * y) $ solve a
+150
+λ> (\(x,y,z) -> x * y) $ solve2 a
+2325
+λ> (\(x,y,z) -> x * y) $ solve2 b
+482365175143
+λ> forward n (x,d,a) = (x + n,d+(a*n),a)
+λ> (\(x,y,z) -> x * y) $ solve2 a
+900
+λ> (\(x,y,z) -> x * y) $ solve2 b
+1848454425
+λ>
+Leaving GHCi.
