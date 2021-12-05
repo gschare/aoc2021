@@ -1,0 +1,2 @@
+--reverse-errors
+--setup=":set args sample.txt"

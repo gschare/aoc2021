@@ -5,8 +5,9 @@ default: part1 part2
 
 part1:
 
-part2:
+part2: part2.hs
+	ghc part2.hs -o part2
 
 .PHONY: clean
 clean:
-	rm -f *.o a.out part1 part2
+	rm -f *.o *.hi a.out part1 part2
