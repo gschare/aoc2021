@@ -144,3 +144,7 @@ performing operations on their columns.
 
 I may try coding that up quickly as well, just so I can feel like I got to
 something of an optimal solution.
+
+# Other people's solutions
+This guy did a better job at the spreadsheet idea, instead of using filters:
+![](https://i.redd.it/5i55dh5rvd381.png)
