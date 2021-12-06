@@ -127,3 +127,20 @@ is the life support rating of the submarine?** (Be sure to represent your
 answer in decimal, not binary.)
 
 # Solution
+I found both parts rather boring to solve, as I found no way to "be clever" and
+avoid having to follow the algorithm exactly as described in the problem.
+
+I chose C initially because I hoped that it having to do with binary numbers
+would allow for a constant-ish space solution, but this was not the case as the
+operation and algorithm we are performing really has nothing to do with binary
+numbers. It just happens that there are two possible values.
+
+So the solution ends up being quite uninteresting. It is solveable in Excel via
+data filtering, which I also did.
+
+I imagine that using DataFrames in Python is the nicest way to solve this,
+since it is really just a problem of repeatedly paring down a grid of values by
+performing operations on their columns.
+
+I may try coding that up quickly as well, just so I can feel like I got to
+something of an optimal solution.
